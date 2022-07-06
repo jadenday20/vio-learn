@@ -1,0 +1,37 @@
+:root {
+    --paragraph1: #072227;
+    --background1: #A76571;
+    --background2: #AEADF0;
+    --background3: #C38D94;
+    --buttoncolor: #565676;
+    --othercolor: #f2f3ff;
+    --othercolor2: #D8DCFF;
+    --heading-font: 'Mali', cursive;
+    --paragraph-font: 'Gentium Book Basic', serif;
+}
+
+body {
+    margin: 0;
+    background-color: #eee;
+}
+
+header, footer {
+    background-color: var(--background1);
+    color: var(--othercolor);
+    margin: 0;
+    padding: 1em;
+    text-align: center;
+}
+
+main {
+    padding: 2em 25%;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--heading-font);
+}
+
+p, li {
+    font-family: var(--paragraph-font);
+    font-size: 22px;
+}

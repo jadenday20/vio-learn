@@ -54,3 +54,15 @@ p, li {
     margin-left: .5em;
     margin-right: .5em;
 }
+
+a {
+    font-family: var(--paragraph-font);
+    font-style: italic;
+    font-weight: bold;
+    color: var(--buttoncolor);
+    text-underline-offset: 1px;
+}
+
+a:hover {
+    color: var(--background2);
+}

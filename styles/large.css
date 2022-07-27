@@ -1,0 +1,6 @@
+@media (min-width:1000px) {
+    p, li {
+        font-family: var(--paragraph-font);
+        font-size: 22px;
+    }
+}

@@ -4,6 +4,7 @@
     --background2: #AEADF0;
     --background3: #C38D94;
     --buttoncolor: #565676;
+    --buttonhover: #6a6a88;
     --othercolor: #f2f3ff;
     --othercolor2: #D8DCFF;
     --heading-font: 'Mali', cursive;
@@ -66,4 +67,49 @@ a {
 
 a:hover {
     color: var(--background2);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+nav li {
+    background-color: var(--buttoncolor);
+    border-radius: 5px;
+    border: 1px solid var(--paragraph1);
+    margin: 0 1em;
+    max-width: 100%;
+    width: 7em;
+}
+
+nav li:hover {
+    background-color: var(--buttonhover);
+}
+
+nav a {
+    display: block;
+    color: var(--othercolor2);
+    font-style: normal;
+    padding: .75em;
+}
+
+nav a:hover {
+    color: var(--othercolor)
+}
+
+#songs section {
+    width: 250px;
+    margin: 1em auto;
+    /* height: 0;
+    padding-bottom: 442.6px;
+    position: relative; */
+}
+
+#songs section iframe {
+    /* position: absolute; */
+    width: 250px;
+    height: 378.6px;
+    border: 2px solid var(--background1);
 }

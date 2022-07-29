@@ -1,0 +1,12 @@
+{
+    "songs": [
+        {
+            "name": "Fiddle Song",
+            "file": "Fiddle_Song"
+        },
+        {
+            "name": "Fiddle Song Fingerings",
+            "file": "Fiddle_Song_Fingering"
+        }
+    ]
+}

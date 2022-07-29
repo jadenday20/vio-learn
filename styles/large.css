@@ -3,4 +3,11 @@
         font-family: var(--paragraph-font);
         font-size: 22px;
     }
+
+    #songs {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2em;
+        height: fit-content;
+    }
 }

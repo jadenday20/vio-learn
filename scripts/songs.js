@@ -7,12 +7,15 @@ function displaySongs(song) {
     let doc = document.createElement('iframe');
     let subtitle = document.createElement('p');
 
-    doc.setAttribute('src', `sheet_music/${song.file}.pdf`)
-    doc.setAttribute('frameborder', `0`)
+    doc.setAttribute('src', `sheet_music/${song.file}.pdf`);
+    doc.setAttribute('frameborder', `0`);
+    subtitle.textContent = song.name;
+    subtitle.setAttribute('class', 'sub');
     // doc.setAttribute('onload', `resizeIframe(this)`)
     // doc.onload = function(){
     //     doc.style.height = doc.contentWindow.document.documentElement.scrollHeight + 'px';
     // }
+    card.appendChild(subtitle);
     card.appendChild(doc);
     cards.appendChild(card);
 }

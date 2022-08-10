@@ -113,3 +113,7 @@ nav a:hover {
     height: 378.6px;
     border: 2px solid var(--background1);
 }
+
+.sub {
+    text-align: center;
+}

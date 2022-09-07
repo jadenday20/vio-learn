@@ -1,5 +1,5 @@
 @media (min-width:1000px) {
-    p, li {
+    p, li, .assignments label {
         font-family: var(--paragraph-font);
         font-size: 22px;
     }

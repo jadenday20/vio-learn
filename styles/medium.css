@@ -4,7 +4,7 @@
         padding: 2em 13%;
     }
 
-    p, li {
+    p, li, .assignments label {
         font-size: 20px;
     }
 
@@ -32,5 +32,10 @@
         /* position: absolute; */
         width: 350px;
         height: 490px;
+    }
+
+    input[type=checkbox] {
+        transform: scale(1.5);
+        margin-right: 8px;
     }
 }

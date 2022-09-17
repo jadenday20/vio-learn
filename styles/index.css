@@ -33,6 +33,10 @@ h1, h2, h3, h4 {
     font-size: 20px;
 }
 
+.assignments li {
+    margin-left: 25px;
+}
+
 p, li, .assignments label {
     font-family: var(--paragraph-font);
     font-size: 17px;

@@ -21,6 +21,21 @@
             "audioFiles": ["FIC2-violin1","FIC2-violin2","FIC2-both","FIC-violin1","FIC-violin2","FIC-both"]
         },
         {
+            "name": "I am a Child of God: Both",
+            "file": "I_am_a_Child_of_God_Both",
+            "audioFiles": ["I_am_a_Child_of_God"]
+        },
+        {
+            "name": "I am a Child of God: Violin 1",
+            "file": "I_am_a_Child_of_God_Violin1",
+            "audioFiles": ""
+        },
+        {
+            "name": "I am a Child of God: Violin 2",
+            "file": "I_am_a_Child_of_God_Violin2",
+            "audioFiles": ""
+        },
+        {
             "name": "Practice Record",
             "file": "practice-record",
             "audioFiles": ""

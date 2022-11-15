@@ -13,12 +13,12 @@
         {
             "name": "Fall is Coming: Part 1",
             "file": "Fall_is_Coming_1",
-            "audioFiles": ["FIC1-violin1","FIC1-violin2","FIC1-both"]
+            "audioFiles": ["FIC1-violin1-count","FIC1-violin2-count","FIC1-both-count"]
         },
         {
             "name": "Fall is Coming: Part 2",
             "file": "Fall_is_Coming_2",
-            "audioFiles": ["FIC2-violin1","FIC2-violin2","FIC2-both","FIC-full-song-violin1","FIC-full-song-violin2","FIC-full-song-both"]
+            "audioFiles": ["FIC2-violin1-count","FIC2-violin2-count","FIC2-both-count","FIC-full-song-violin1-count","FIC-full-song-violin2-count","FIC-full-song-both-count"]
         },
         {
             "name": "I am a Child of God: Both",

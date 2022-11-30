@@ -16,6 +16,11 @@
     --thanksgiving-button: #e5d666;
     --thanksgiving-button-hover: #c8b171;
     --thanksgiving-button-text: #55473d;
+    --christmas-background1: #409241;
+    --christmas-button: #f34f4f;
+    --christmas-button-hover: #e56666;
+    --christmas-button-text: #ddd;
+    --othercolor: #ddd
     
     
 }
@@ -26,7 +31,7 @@ body {
 }
 
 header, footer {
-    background-color: var(--thanksgiving-background1);
+    background-color: var(--christmas-background1);
     color: var(--othercolor);
     margin: 0;
     padding: 1em;
@@ -48,7 +53,7 @@ h1, h2, h3, h4 {
 }
 
 .assignments li {
-    background: url('../images/turkey.png') no-repeat left center;
+    background: url('../images/christmas-star.png') no-repeat left center;
     margin-left: 25px;
     padding: 10px 0 4px 39px;
 }
@@ -89,7 +94,7 @@ a {
 }
 
 a:hover {
-    color: var(--thanksgiving-button);
+    color: var(--christmas-button);
 }
 
 nav ul {
@@ -99,7 +104,7 @@ nav ul {
 }
 
 nav li, button {
-    background-color: var(--thanksgiving-button);
+    background-color: var(--christmas-button);
     border-radius: 5px;
     border: 1px solid var(--paragraph1);
     margin: 0 1em;
@@ -108,20 +113,20 @@ nav li, button {
 }
 
 nav li:hover, button:hover {
-    background-color: var(--thanksgiving-button-hover);
+    background-color: var(--christmas-button-hover);
 }
 
 nav a, button {
     text-decoration: none;
     display: block;
-    color: var(--thanksgiving-button-text);
+    color: var(--christmas-button-text);
     font-style: normal;
     padding: .75em;
 }
 
 nav a:hover, button {
     color: var(--othercolor);
-    color: var(--paragraph1);/*Thanksgiving*/
+    color: var(--paragraph1);/*christmas*/
 }
 
 button {
@@ -145,7 +150,7 @@ button:hover {
     /* position: absolute; */
     width: 250px;
     height: 378.6px;
-    border: 2px solid var(--thanksgiving-background1);
+    border: 2px solid var(--christmas-background1);
 }
 
 .sub {

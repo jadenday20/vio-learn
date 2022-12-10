@@ -103,7 +103,7 @@ nav ul {
     padding-left: 0;
 }
 
-nav li, button {
+nav li, button, .alert {
     background-color: var(--christmas-button);
     border-radius: 5px;
     border: 1px solid var(--paragraph1);
@@ -116,7 +116,7 @@ nav li:hover, button:hover {
     background-color: var(--christmas-button-hover);
 }
 
-nav a, button {
+nav a, button, .alert {
     text-decoration: none;
     display: block;
     color: var(--christmas-button-text);
@@ -124,9 +124,20 @@ nav a, button {
     padding: .75em;
 }
 
-nav a:hover, button {
+nav a:hover, button, .alert {
     color: var(--othercolor);
     color: var(--paragraph1);/*christmas*/
+}
+
+.alert {
+    width: fit-content;
+    color: var(--christmas-button-text);
+    box-shadow: 1px 1.5px #111111cc;
+    margin-bottom: .5em;
+}
+
+.alert:hover {
+    cursor: pointer;
 }
 
 button {

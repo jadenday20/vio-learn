@@ -6,6 +6,7 @@ function displaySongs(song) {
     let card = document.createElement('section');
     let doc = document.createElement('iframe');
     let subtitle = document.createElement('p');
+    card.setAttribute('id', song.file)
 
     doc.setAttribute('src', `sheet_music/${song.file}.pdf`);
     doc.setAttribute('frameborder', `0`);

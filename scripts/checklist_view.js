@@ -12,7 +12,7 @@ function add_checkboxes(){
             checkbox.setAttribute('name', text);
             label_text.textContent = text;
             let label = document.createElement('label');
-            label.style.padding = '10px 0 4px 39px'; //halloween special
+            // label.style.padding = '10px 0 4px 39px'; //halloween special
             // label.setAttribute('for', text)
             ul.appendChild(label);
             label.appendChild(checkbox);

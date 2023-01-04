@@ -5,6 +5,7 @@
     --background3: #C38D94;
     --buttoncolor: #565676;
     --buttonhover: #6a6a88;
+    --buttontext: #f2f3ff;
     --othercolor: #f2f3ff;
     --othercolor2: #D8DCFF;
     --heading-font: 'Mali', cursive;
@@ -22,11 +23,11 @@
     --christmas-button-text: #ddd;
     --christmas-othercolor: #ddd;
 
-    --current-background1: var(--christmas-background1);
-    --current-button: var(--christmas-button);
-    --current-button-hover: var(--christmas-button-hover);
-    --current-button-text: var(--christmas-button-text);
-    --current-othercolor: var(--christmas-othercolor);
+    --current-background1: var(--background1);
+    --current-button: var(--buttoncolor);
+    --current-button-hover: var(--buttonhover);
+    --current-button-text: var(--button-text);
+    --current-othercolor: var(--othercolor);
     
     
 }
@@ -37,7 +38,7 @@ body {
 }
 
 header, footer {
-    background-color: var(--christmas-background1);
+    background-color: var(--current-background1);
     color: var(--current-othercolor);
     margin: 0;
     padding: 1em;
@@ -54,14 +55,13 @@ h1, h2, h3, h4 {
 }
 
 .assignments {
-    /* list-style-image: url("../images/pumpkin.png"); */
     list-style: none;
 }
 
 .assignments li {
-    background: url('../images/christmas-star.png') no-repeat left center;
+    /* background: url('../images/christmas-star.png') no-repeat left center; */
     margin-left: 25px;
-    padding: 10px 0 4px 39px;
+    /* padding: 10px 0 4px 39px; */
 }
 
 p, li, .assignments label {
@@ -132,7 +132,6 @@ nav a, button, .alert {
 
 nav a:hover, button, .alert {
     color: var(--othercolor);
-    color: var(--paragraph1);/*christmas*/
 }
 
 .alert {

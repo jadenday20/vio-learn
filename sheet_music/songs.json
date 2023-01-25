@@ -1,6 +1,11 @@
 {
     "songs": [
         {
+            "name": "Go the Distance",
+            "file": "Go_the_Distance",
+            "audioFiles": ""
+        },
+        {
             "name": "Fiddle Song",
             "file": "Fiddle_Song",
             "audioFiles": ""

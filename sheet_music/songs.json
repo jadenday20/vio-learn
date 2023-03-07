@@ -1,6 +1,11 @@
 {
     "songs": [
         {
+            "name": "The Round Song",
+            "file": "The_Round_Song",
+            "audioFiles": ""
+        },
+        {
             "name": "Go the Distance",
             "file": "Go_the_Distance",
             "audioFiles": ""

@@ -3,7 +3,7 @@
         {
             "name": "The Round Song",
             "file": "The_Round_Song",
-            "audioFiles": ""
+            "audioFiles": ["The_Round_Song"]
         },
         {
             "name": "Go the Distance",

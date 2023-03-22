@@ -31,11 +31,6 @@
             "audioFiles": ["FIC2-violin1-count","FIC2-violin2-count","FIC2-both-count","FIC-full-song-violin1-count","FIC-full-song-violin2-count","FIC-full-song-both-count"]
         },
         {
-            "name": "Fall is Coming: Part 3",
-            "file": "Fall_is_Coming_3",
-            "audioFiles": ""
-        },
-        {
             "name": "I am a Child of God: Both",
             "file": "I_am_a_Child_of_God_Both",
             "audioFiles": ["I_am_a_Child_of_God", "Child_of_God_Violin_counting", "Child_of_God_Piano_counting"]

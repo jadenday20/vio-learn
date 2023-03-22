@@ -8,7 +8,7 @@
         {
             "name": "Go the Distance",
             "file": "Go_the_Distance",
-            "audioFiles": ""
+            "audioFiles": ["go_the_distance"]
         },
         {
             "name": "Fiddle Song",

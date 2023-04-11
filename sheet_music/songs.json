@@ -6,6 +6,11 @@
             "audioFiles": ["The_Round_Song"]
         },
         {
+            "name": "He's a Pirate",
+            "file": "Hes_a_Pirate",
+            "audioFiles": ""
+        },
+        {
             "name": "Go the Distance",
             "file": "Go_the_Distance",
             "audioFiles": ["go_the_distance"]

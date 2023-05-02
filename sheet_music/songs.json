@@ -1,6 +1,11 @@
 {
     "songs": [
         {
+            "name": "A Whole New World",
+            "file": "A_Whole_New_World",
+            "audioFiles": ["A_Whole_New_World"]
+        },
+        {
             "name": "The Round Song",
             "file": "The_Round_Song",
             "audioFiles": ["The_Round_Song"]

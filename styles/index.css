@@ -38,7 +38,7 @@ body {
 }
 
 header, footer {
-    background-color: var(--current-background1);
+    background-color: var(--paragraph1);
     color: var(--current-othercolor);
     margin: 0;
     padding: 1em;
@@ -110,7 +110,7 @@ nav ul {
 }
 
 nav li, button, .alert {
-    background-color: var(--current-button);
+    background-color: var(--background1);
     border-radius: 5px;
     border: 1px solid var(--paragraph1);
     margin: 0 1em;
@@ -224,6 +224,8 @@ input[type=checkbox] {
 #calendar #month {
     grid-column: 1 / span 7;
     text-align: center;
+    background-color: var(--paragraph1);
+    color: white;
     padding: 0;
 }
 

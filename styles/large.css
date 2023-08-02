@@ -1,4 +1,7 @@
 @media (min-width:1000px) {
+    main {
+        padding: 2em 25%;
+    }
     h1 {
         font-size: 32px;
     }

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vio-Learn</title>
+        <link rel="stylesheet" href="styles/index.css">
+        <link rel="stylesheet" href="styles/medium.css">
+        <link rel="stylesheet" href="styles/large.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Basic&family=Mali:wght@500&display=swap"
+            rel="stylesheet">
+        <link rel="shortcut icon" href="images/violearn-icon.png">
+    </head>
+
+    <body>
+        <header>
+            <div class="flex-container">
+                <h1>Welcome to Vio-Learn!</h1>
+                <a href="#"><img id="logo" src="images/violearn-logo.png" alt=""></a>
+            </div>
+            <nav>
+                <ul class="flex-container">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Assignments</a></li>
+                    <li><a href="music.html">Sheet Music</a></li>
+                    <li><a href="practice.html">Practice</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <!-- <a class="alert" href="music.html">
+            <span>Merry Christmas Students! Head to "Sheet Music" for a peak at our latest edition to <i>Fall is Coming</i>.</span>
+          </a> -->
+            <span class="date"></span>
+            <ul class="assignments">
+                <h2>Assignments</h2>
+                <h3>Scales</h3>
+                <li>x2 2-Octave 'G' Scales (Use the "down-up, up" rhythm)</li>
+                <h4>Example Scale Rhythms</h4>
+                <li>pepp-er-o-ni-pi-zza</li>
+                <li>pepp-er-o-ni</li>
+                <li>pine-ap-ple</li>
+                <li>pi-zza</li>
+                <li>hump-ty-dump-ty</li>
+                <h3>Assignments for Everyone:</h3>
+                <li>Play one song from the "Other Songs" list</li>
+                <li>3 minutes on The Round Song (Practice with Audio)</li>
+                <!-- <li>5 minutes practice on the new section of Fall is Coming</li> -->
+                <h3>Personal Assignments</h3>
+                <h4>Peter</h4>
+                <li>2 minutes on I am a Child of God (Use the metronome)</li>
+                <li>3 minutes on Perpetual Motion (Suzuki #9)</li>
+                <li>1 Song Fingering Practice w/Mom</li>
+                <li>2 minutes Go the Distance</li>
+                <h4>Elisha and Mom</h4>
+                <li>3 minutes (or longer) on Gavotte</li>
+                <li>3 minutes (or longer) on shifting</li>
+                <li>Pick one thing to work on from below:</li>
+                <li>Grace Notes</li>
+                <li>Bowings (retakes, double up-bows)</li>
+                <li>Dynamics</li>
+                <li>Tempo (rit., a tempo)</li>
+                <li>Switching from pizz to arco</li>
+                <li>Style (Staccato, <a href="https://en.wikipedia.org/wiki/Tenuto" target="_blank">Tenuto</a>,
+                    Cantabile)</li>
+                <h3>Other Songs</h3>
+                <li>Fiddle Song</li>
+                <li>Theme from Mahler Symphony 1</li>
+                <li>Song of the Wind</li>
+                <li>Lightly Row</li>
+                <li>Mary Had a Little Lamb</li>
+                <li>Twinkle Twinkle, Little Star</li>
+                <li>Any other song from the Suzuki Book</li>
+            </ul>
+            <button id="checklist_view" onclick="add_checkboxes()">Checklist View</button>
+            <button id="list_view" onclick="remove_checkboxes()">List View</button>
+            <script src="scripts/checklist_view.js"></script>
+            <script src="scripts/date.js"></script>
+
+        </main>
+        <footer>
+            <p>&copy;2023 | Jaden Day</p>
+        </footer>
+    </body>
+
+</html>

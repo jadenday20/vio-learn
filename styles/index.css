@@ -227,13 +227,42 @@ input[type=checkbox] {
     background-color: var(--paragraph1);
     color: white;
     padding: 0;
+    position: relative;
+}
+
+.arrow {
+    position: absolute;
+    width: 0; 
+    height: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+#arrow1 {
+    left: 30px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent; 
+    border-right:15px solid var(--buttontext);
+}
+
+#arrow2 {
+    right: 30px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent; 
+    border-left:15px solid var(--buttontext);
 }
 
 .weekday {
     text-align: center;
 }
 
-.currDay {
+.currDay p{
     background-color: var(--paragraph1);
     color: white;
+}
+
+.input {
+    width: 1.8em;
+    font-size: 30px;
 }

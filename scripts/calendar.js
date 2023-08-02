@@ -142,6 +142,8 @@ function fillMonthDays(year, month, calendar) {
     if (!isCurrMonth(year, month) || i <= day) {
       const label = document.createElement("label");
       const input = document.createElement("input");
+      label.classList.add("practiceLabel");
+      label.textContent = "minutes practiced:";
       input.type = "text";
       input.id = `in:${month}/${i}/${year}`;
       input.classList.add("input");

@@ -1,3 +1,5 @@
+import { getPractice, getPracticeByDate } from "../server.js";
+
 const monthList = [
   "January",
   "February",
@@ -17,15 +19,16 @@ const monthList = [
 const currentTime = new Date();
 var year = currentTime.getFullYear();
 var month = currentTime.getMonth();
-var day = currentTime.getDate();
 
 const calendar = document.getElementById("calendar");
 
-function fillCalendar(year, month, calendar) {
+var practice = await getPractice("64db1ca98e25c74daadc6f94");
+
+async function fillCalendar(year, month, calendar) {
   setMonthName(year, month);
   setArrows(year, month);
   fillBlankDays(year, month, calendar);
-  fillMonthDays(year, month, calendar);
+  await fillMonthDays(year, month, calendar);
   fillRemainingCalendar(calendar);
   setCurrDay();
 }
@@ -126,33 +129,63 @@ function getDaysInAmonth(year, month) {
   return new Date(year, month + 1, 0).getDate();
 }
 
-function fillMonthDays(year, month, calendar) {
+async function fillMonthDays(year, month, calendar) {
   const daysInMonth = getDaysInAmonth(year, month);
   for (let i = 1; i <= daysInMonth; i++) {
-    const li = document.createElement("li");
-    const date = document.createElement("p");
-    date.textContent = i;
-    date.classList.add("monthDay");
-    li.id = `${month}/${i}/${year}`;
+    populateDate(i, year, month, calendar);
+  }
+  for (let i = 1; i <= daysInMonth; i++) {
+    await populatePractice(i, year, month);
+  }
+}
 
-    li.appendChild(date);
+function populateDate(i, year, month, calendar) {
+  const li = document.createElement("li");
+  const date = document.createElement("p");
+  date.textContent = i;
+  date.classList.add("monthDay");
+  li.id = `${month + 1}/${i}/${year}`;
 
-    const currentTime = new Date();
-    var day = currentTime.getDate();
-    if (!isCurrMonth(year, month) || i <= day) {
-      const label = document.createElement("label");
-      const input = document.createElement("input");
-      label.classList.add("practiceLabel");
-      label.textContent = "minutes practiced:";
-      input.type = "text";
-      input.id = `in:${month}/${i}/${year}`;
-      input.classList.add("input");
-      input.maxLength = "3";
-      label.setAttribute("for", input.id);
-      li.appendChild(label);
-      li.appendChild(input);
+  li.appendChild(date);
+
+  const currentTime = new Date();
+  var day = currentTime.getDate();
+  if (!isCurrMonth(year, month) || i <= day) {
+    const label = document.createElement("label");
+    const practiceNum = document.createElement("button");
+    const input = document.createElement("input");
+    practiceNum.classList.add("practiceNum");
+    label.classList.add("practiceLabel");
+    label.textContent = "minutes practiced:";
+    input.type = "text";
+    input.id = `in:${month + 1}/${i}/${year}`;
+    input.classList.add("input");
+    input.maxLength = "3";
+    label.setAttribute("for", input.id);
+    label.value = li.appendChild(label);
+    // li.appendChild(input);
+    li.appendChild(practiceNum);
+  }
+  calendar.appendChild(li);
+}
+async function populatePractice(i, year, month) {
+  const currentTime = new Date();
+  var day = currentTime.getDate();
+  if (!isCurrMonth(year, month) || i <= day) {
+    let practiceNum = document.querySelector(
+      `#` + CSS.escape(`${month + 1}/${i}/${year}`) + ` button`
+    );
+
+    let dailyPractice = getPracticeByDate(
+      practice,
+      `${month + 1}/${i}/${year}`
+    );
+
+    if (dailyPractice) {
+      practiceNum.innerHTML = dailyPractice;
+    } else {
+      practiceNum.innerHTML = 0;
     }
-    calendar.appendChild(li);
   }
 }
 
@@ -161,7 +194,7 @@ function setCurrDay() {
   var year = currentTime.getFullYear();
   var month = currentTime.getMonth();
   var day = currentTime.getDate();
-  var currDay = document.getElementById(`${month}/${day}/${year}`);
+  var currDay = document.getElementById(`${month + 1}/${day}/${year}`);
   if (currDay) {
     currDay.classList.add("currDay");
   }

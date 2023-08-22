@@ -11,6 +11,19 @@ function getPracticeByDate(practice, date) {
   return practice[date];
 }
 
+function setPracticeByDate(practice, date, minutes) {
+  return axios
+    .post(practice, {
+      [date]: minutes,
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+}
+
 function getPractice(studentID) {
   return axios
     .get(baseURL + `students`)
@@ -29,4 +42,4 @@ function getStudent(response, id) {
 
 getPractice("64db1ca98e25c74daadc6f94", "6/21/2023");
 
-export { getPracticeByDate, getPractice };
+export { getPracticeByDate, getPractice, setPracticeByDate };

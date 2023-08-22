@@ -1,4 +1,8 @@
-import { getPractice, getPracticeByDate } from "../server.js";
+import {
+  getPractice,
+  getPracticeByDate,
+  setPracticeByDate,
+} from "../server.js";
 
 const monthList = [
   "January",
@@ -155,15 +159,20 @@ function populateDate(i, year, month, calendar) {
     const practiceNum = document.createElement("button");
     const input = document.createElement("input");
     practiceNum.classList.add("practiceNum");
+    practiceNum.addEventListener("click", minutesToInput);
+    practiceNum.day = i;
+    practiceNum.month = month + 1;
+    practiceNum.year = year;
     label.classList.add("practiceLabel");
     label.textContent = "minutes practiced:";
     input.type = "text";
     input.id = `in:${month + 1}/${i}/${year}`;
     input.classList.add("input");
+    input.classList.add("hidden");
     input.maxLength = "3";
     label.setAttribute("for", input.id);
     label.value = li.appendChild(label);
-    // li.appendChild(input);
+    li.appendChild(input);
     li.appendChild(practiceNum);
   }
   calendar.appendChild(li);
@@ -213,6 +222,55 @@ function fillRemainingCalendar(calendar) {
     const blankDate = document.createElement("li");
     calendar.appendChild(blankDate);
   }
+}
+
+function minutesToInput(evt) {
+  var day = evt.currentTarget.day;
+  var month = evt.currentTarget.month;
+  var year = evt.currentTarget.year;
+
+  let practiceNum = document.querySelector(
+    `#` + CSS.escape(`${month}/${day}/${year}`) + ` button`
+  );
+
+  let inputField = document.getElementById(`in:${month}/${day}/${year}`);
+  practiceNum.classList.toggle("hidden");
+  inputField.classList.toggle("hidden");
+  inputField.select();
+  inputField.addEventListener("keypress", function (e) {
+    if (e.key === "Enter") {
+      inputToMinutes();
+    }
+  });
+
+  let dailyPractice = getPracticeByDate(practice, `${month}/${day}/${year}`);
+  if (dailyPractice) {
+    inputField.value = dailyPractice;
+  }
+
+  document.day = day;
+  document.month = month;
+  document.year = year;
+  document.addEventListener("mousedown", inputToMinutes);
+}
+
+function inputToMinutes() {
+  var day = document.day;
+  var month = document.month;
+  var year = document.year;
+  var date = `${month}/${day}/${year}`;
+
+  let practiceNum = document.querySelector(
+    `#` + CSS.escape(`${month}/${day}/${year}`) + ` button`
+  );
+  let inputField = document.getElementById(`in:${date}`);
+  var minutes = inputField.value;
+  if (minutes) {
+    setPracticeByDate(practice, date, minutes);
+  }
+  practiceNum.classList.toggle("hidden");
+  inputField.classList.toggle("hidden");
+  document.removeEventListener("mousedown", inputToMinutes);
 }
 
 fillCalendar(year, month, calendar);

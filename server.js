@@ -11,9 +11,10 @@ function getPracticeByDate(practice, date) {
   return practice[date];
 }
 
-function setPracticeByDate(practice, date, minutes) {
+function setPracticeByDate(id, date, minutes) {
+  console.log(`id:${id}\ndate:${date}\nminutes:${minutes}`);
   return axios
-    .post(practice, {
+    .post(`/practice/${id}`, {
       [date]: minutes,
     })
     .then(function (response) {

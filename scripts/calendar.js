@@ -26,12 +26,15 @@ var month = currentTime.getMonth();
 
 const calendar = document.getElementById("calendar");
 
-var practice = await getPractice("64db1ca98e25c74daadc6f94");
+const studentID = "64db1ca98e25c74daadc6f94";
+
+var practice;
 
 async function fillCalendar(year, month, calendar) {
   setMonthName(year, month);
   setArrows(year, month);
   fillBlankDays(year, month, calendar);
+  practice = await getPractice(studentID);
   await fillMonthDays(year, month, calendar);
   fillRemainingCalendar(calendar);
   setCurrDay();
@@ -266,7 +269,7 @@ function inputToMinutes() {
   let inputField = document.getElementById(`in:${date}`);
   var minutes = inputField.value;
   if (minutes) {
-    setPracticeByDate(practice, date, minutes);
+    setPracticeByDate(studentID, date, minutes);
   }
   practiceNum.classList.toggle("hidden");
   inputField.classList.toggle("hidden");

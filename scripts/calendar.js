@@ -283,8 +283,9 @@ function inputToMinutes() {
   );
   let inputField = document.getElementById(`in:${date}`);
   var minutes = inputField.value;
-  if (minutes) {
+  if (minutes != undefined) {
     setPracticeByDate(studentID, date, minutes);
+    practiceNum.textContent = minutes;
   }
   practiceNum.classList.toggle("hidden");
   inputField.classList.toggle("hidden");

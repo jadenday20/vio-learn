@@ -34,8 +34,11 @@ async function fillCalendar(year, month, calendar) {
   setMonthName(year, month);
   setArrows(year, month);
   fillBlankDays(year, month, calendar);
+  var daysInMonth = getDaysInAmonth(year, month);
+  fillDates(year, month, daysInMonth, calendar);
   practice = await getPractice(studentID);
-  await fillMonthDays(year, month, calendar);
+  await fillPractice(year, month, daysInMonth);
+  // await fillMonthDays(year, month, calendar);
   fillRemainingCalendar(calendar);
   setCurrDay();
 }
@@ -141,6 +144,18 @@ async function fillMonthDays(year, month, calendar) {
   for (let i = 1; i <= daysInMonth; i++) {
     populateDate(i, year, month, calendar);
   }
+  for (let i = 1; i <= daysInMonth; i++) {
+    await populatePractice(i, year, month);
+  }
+}
+
+function fillDates(year, month, daysInMonth, calendar) {
+  for (let i = 1; i <= daysInMonth; i++) {
+    populateDate(i, year, month, calendar);
+  }
+}
+
+async function fillPractice(year, month, daysInMonth) {
   for (let i = 1; i <= daysInMonth; i++) {
     await populatePractice(i, year, month);
   }

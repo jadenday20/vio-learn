@@ -255,13 +255,18 @@ function minutesToInput(evt) {
   practiceNum.classList.toggle("hidden");
   inputField.classList.toggle("hidden");
   inputField.select();
-  inputField.addEventListener("keypress", function (e) {
-    if (e.key === "Enter") {
-      inputToMinutes();
-    }
-  });
+  if (inputField.getAttribute("listener") !== "true") {
+    inputField.addEventListener("keypress", function (e) {
+      if (e.key === "Enter") {
+        inputToMinutes();
+      }
+      const elementClicked = e.target;
+      elementClicked.setAttribute("listener", "true");
+    });
+  }
 
-  let dailyPractice = getPracticeByDate(practice, `${month}/${day}/${year}`);
+  // let dailyPractice = getPracticeByDate(practice, `${month}/${day}/${year}`);
+  let dailyPractice = practiceNum.textContent;
   if (dailyPractice) {
     inputField.value = dailyPractice;
   }
@@ -283,7 +288,7 @@ function inputToMinutes() {
   );
   let inputField = document.getElementById(`in:${date}`);
   var minutes = inputField.value;
-  if (minutes != undefined) {
+  if (minutes) {
     setPracticeByDate(studentID, date, minutes);
     practiceNum.textContent = minutes;
   }

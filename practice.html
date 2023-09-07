@@ -34,10 +34,14 @@
             </nav>
         </header>
         <main>
+            <h2>Practice</h2>
             <!-- <button onclick="login()">login</button> -->
 
             <ul id="calendar">
-                <button id="loginButton" onclick="location.href='./account.html'">Login</button>
+                <div id="loggedOut">
+                    <p>It looks like you're not logged in yet. Login here to see your practice.</p>
+                    <button id="loginButton" onclick="location.href='./account.html'">Login</button>
+                </div>
             </ul>
             <script type="module" src="./server.js"></script>
             <script src="./redirect.js"></script>

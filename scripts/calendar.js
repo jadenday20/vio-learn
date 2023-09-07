@@ -22,7 +22,7 @@ const monthList = [
 var studentID = localStorage.getItem("studentID");
 
 if (studentID) {
-  document.getElementById("loginButton").classList.add("hidden");
+  document.getElementById("loggedOut").classList.add("hidden");
 
   //generate current calendar
   const currentTime = new Date();

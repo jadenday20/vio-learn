@@ -97,3 +97,7 @@ main {
 .hidden {
     display: none;
 }
+
+#loggedOut {
+    grid-column: 1 / -1;
+}

@@ -33,8 +33,21 @@
             </nav>
         </header>
         <main>
-            <button onclick="login()">login</button>
-            <script src="./redirect.js"></script>
+            <div class="loggedOut account">
+                <h2>Login Portal</h2>
+                <p>Login to your designated account below:</p>
+                <button onclick="login('64db1ca98e25c74daadc6f94', 'Peter')">Peter</button>
+                <button onclick="login('64db1ca98e25c74daadc6f96', 'Marjean')">Marjean</button>
+                <button onclick="login('64db1ca98e25c74daadc6f95', 'Elisha')">Elisha</button>
+            </div>
+            <div class="loggedIn hidden account">
+                <h2 class="studentName"></h2>
+                <button onclick="location.href='./practice.html'">Practice</button>
+                <button onclick="logout()">Log Out</button>
+            </div>
+            <!-- <button onclick="login()">login</button> -->
+            <!-- <script src="./scripts/redirect.js"></script> -->
+            <script src="scripts/accounts.js"></script>
         </main>
         <footer>
             <p>&copy;2023 | Jaden Day</p>

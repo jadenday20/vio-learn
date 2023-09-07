@@ -19,18 +19,26 @@ const monthList = [
   "December",
 ];
 
-//generate current calendar
-const currentTime = new Date();
-var year = currentTime.getFullYear();
-var month = currentTime.getMonth();
+var studentID = localStorage.getItem("studentID");
 
-const calendar = document.getElementById("calendar");
+if (studentID) {
+  document.getElementById("loginButton").classList.add("hidden");
 
-const studentID = "64db1ca98e25c74daadc6f94";
+  //generate current calendar
+  const currentTime = new Date();
+  var year = currentTime.getFullYear();
+  var month = currentTime.getMonth();
 
-var practice;
+  const calendar = document.getElementById("calendar");
+  const calendarID = "calendar";
 
-async function fillCalendar(year, month, calendar) {
+  var practice;
+
+  fillCalendar(year, month, calendar, calendarID);
+}
+
+async function fillCalendar(year, month, calendar, calendarID) {
+  createWeeks(calendarID);
   setMonthName(year, month);
   setArrows(year, month);
   fillBlankDays(year, month, calendar);
@@ -43,9 +51,24 @@ async function fillCalendar(year, month, calendar) {
   setCurrDay();
 }
 
+function createWeeks(calendarID) {
+  let calendar = document.getElementById(calendarID);
+  calendar.innerHTML = `<li id="month">
+  <h2></h2>
+</li>
+<li class="weekday">Monday</li>
+<li class="weekday">Tuesday</li>
+<li class="weekday">Wednesday</li>
+<li class="weekday">Thursday</li>
+<li class="weekday">Friday</li>
+<li class="weekday">Saturday</li>
+<li class="weekday">Sunday</li>`;
+}
+
 function setMonthName(year, month) {
   const monthName = document.querySelector("#month h2");
-  monthName.textContent = monthList[month] + ", " + year;
+  let studentName = localStorage.getItem("studentName");
+  monthName.textContent = studentName + ": " + monthList[month] + ", " + year;
 }
 
 function setArrows(year, month) {
@@ -296,5 +319,3 @@ function inputToMinutes() {
   inputField.classList.toggle("hidden");
   document.removeEventListener("mousedown", inputToMinutes);
 }
-
-fillCalendar(year, month, calendar);

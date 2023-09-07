@@ -150,6 +150,7 @@ nav a:hover, button, .alert {
 button {
     width: 10em;
     font-size: 20px;
+    font-family: var(--paragraph-font);
 }
 
 button:hover {
@@ -188,4 +189,12 @@ button:hover {
 
 input[type=checkbox] {
     cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.account button {
+    margin-bottom: 5px;
 }

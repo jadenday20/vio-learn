@@ -20,6 +20,7 @@ const monthList = [
 ];
 
 var studentID = localStorage.getItem("studentID");
+const calendarID = "calendar";
 
 if (studentID) {
   document.getElementById("loggedOut").classList.add("hidden");
@@ -30,7 +31,6 @@ if (studentID) {
   var month = currentTime.getMonth();
 
   const calendar = document.getElementById("calendar");
-  const calendarID = "calendar";
 
   var practice;
 
@@ -122,7 +122,7 @@ function shiftMonth(evt) {
       month = 11;
       year -= 1;
     }
-    fillCalendar(year, month, calendar);
+    fillCalendar(year, month, calendar, calendarID);
   } else if (evt.currentTarget.direction == "forward") {
     if (month != 11) {
       month += 1;

@@ -130,7 +130,7 @@ function shiftMonth(evt) {
       month = 0;
       year += 1;
     }
-    fillCalendar(year, month, calendar);
+    fillCalendar(year, month, calendar, calendarID);
   }
 }
 

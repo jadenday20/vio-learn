@@ -101,3 +101,39 @@ main {
 #loggedOut {
     grid-column: 1 / -1;
 }
+
+body{
+    position: absolute;
+}
+.progress{
+    position: relative;
+    height: 10px;
+    width: 40%;
+    border: 4px solid var(--background1);
+    border-radius: 15px;
+}
+.progress .color{
+    position: absolute;
+    background-color: var(--paragraph1);
+    width: 0px;
+    height: 10px;
+    border-radius: 15px;
+    animation: progres 4s infinite linear;    
+}
+@keyframes progres{
+    0%{
+      width: 0%;
+    }
+    25%{
+        width: 50%;
+    }
+    50%{
+        width: 75%;
+    }
+    75%{
+        width: 85%;
+    }
+    100%{
+        width: 100%;
+    }
+};

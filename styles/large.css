@@ -22,7 +22,7 @@
     #songs {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-gap: 2em;
+        grid-gap: 0 2em;
         height: fit-content;
     }
 }

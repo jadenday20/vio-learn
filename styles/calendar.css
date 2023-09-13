@@ -102,9 +102,6 @@ main {
     grid-column: 1 / -1;
 }
 
-body{
-    position: absolute;
-}
 .progress{
     position: relative;
     height: 10px;

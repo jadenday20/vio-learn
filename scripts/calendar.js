@@ -23,7 +23,8 @@ var studentID = localStorage.getItem("studentID");
 const calendarID = "calendar";
 
 if (studentID) {
-  document.getElementById("loggedOut").classList.add("hidden");
+  document.getElementById("loggedOut").classList.toggle("hidden");
+  document.getElementById(calendarID).classList.toggle("hidden");
 
   //generate current calendar
   const currentTime = new Date();
@@ -179,13 +180,13 @@ function fillDates(year, month, daysInMonth, calendar) {
 }
 
 async function fillPractice(year, month, daysInMonth) {
-  document.querySelector(".progress").classList.toggle("hidden");
-  console.log("Filling practice. This may take a minute.");
+  document.querySelector(".progressMessage").classList.toggle("hidden");
+  // console.log("Filling practice. This may take a minute.");
   for (let i = 1; i <= daysInMonth; i++) {
     await populatePractice(i, year, month);
   }
-  console.log("Practice filled successfully.");
-  document.querySelector(".progress").classList.toggle("hidden");
+  // console.log("Practice filled successfully.");
+  document.querySelector(".progressMessage").classList.toggle("hidden");
 }
 
 function populateDate(i, year, month, calendar) {

@@ -37,14 +37,17 @@
             <h2>Practice</h2>
             <!-- <button onclick="login()">login</button> -->
 
-            <div class="progress hidden">
-                <div class="color"></div>
-            </div>
-            <ul id="calendar">
-                <div id="loggedOut">
-                    <p>It looks like you're not logged in yet. Login here to see your practice.</p>
-                    <button id="loginButton" onclick="location.href='./account.html'">Login</button>
+            <div class="progressMessage hidden">
+                <p>Loading the practice in from our database. This should take less than a minute.</p>
+                <div class="progress">
+                    <div class="color"></div>
                 </div>
+            </div>
+            <div id="loggedOut">
+                <p>It looks like you're not logged in yet. Login here to see your practice.</p>
+                <button id="loginButton" onclick="location.href='./account.html'">Login</button>
+            </div>
+            <ul id="calendar" class="hidden">
             </ul>
             <script type="module" src="./server.js"></script>
             <script src="./scripts/redirect.js"></script>

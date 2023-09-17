@@ -3,7 +3,7 @@ main {
 }
 
 #calendar {
-    /* border: 1px solid var(--paragraph1); */
+    border: 1px solid var(--paragraph1);
     padding: 0;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
@@ -95,7 +95,7 @@ main {
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 #loggedOut {

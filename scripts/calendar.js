@@ -179,12 +179,13 @@ function fillDates(year, month, daysInMonth, calendar) {
 }
 
 async function fillPractice(year, month, daysInMonth) {
+  document.querySelector(".progress").classList.toggle("hidden");
   console.log("Filling practice. This may take a minute.");
   for (let i = 1; i <= daysInMonth; i++) {
     await populatePractice(i, year, month);
   }
   console.log("Practice filled successfully.");
-  document.querySelector(".progress").classList.add("hidden");
+  document.querySelector(".progress").classList.toggle("hidden");
 }
 
 function populateDate(i, year, month, calendar) {

@@ -24,6 +24,7 @@ const calendarID = "calendar";
 
 if (studentID) {
   document.getElementById("loggedOut").classList.toggle("hidden");
+  document.querySelector(".progressMessage").classList.toggle("hidden");
   document.getElementById(calendarID).classList.toggle("hidden");
 
   //generate current calendar
@@ -180,7 +181,7 @@ function fillDates(year, month, daysInMonth, calendar) {
 }
 
 async function fillPractice(year, month, daysInMonth) {
-  document.querySelector(".progressMessage").classList.toggle("hidden");
+  // document.querySelector(".progressMessage").classList.toggle("hidden");
   // console.log("Filling practice. This may take a minute.");
   for (let i = 1; i <= daysInMonth; i++) {
     await populatePractice(i, year, month);

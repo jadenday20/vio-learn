@@ -1,7 +1,20 @@
 @media (min-width:575px) {
 
+    .hamburger {
+        display: none;
+    }
+    
     main {
         padding: 2em 13%;
+    }
+
+    nav ul {
+        flex-direction: row;
+    }
+
+    nav li {
+        width: 7em;
+        margin: 0 1em;
     }
 
     p, li, .assignments label {

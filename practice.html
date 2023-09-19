@@ -25,11 +25,16 @@
             </div>
             <nav>
                 <ul class="flex-container">
-                    <li><a href="index.html">Home</a></li>
+                    <li class="hamburger"><a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+                            <div class="bar bar1"></div>
+                            <div class="bar bar2"></div>
+                            <div class="bar bar3"></div>
+                        </a></li>
+                    <li><a href="index.html" class="pageLink">Home</a></li>
                     <!-- <li><a href="assignments.html">Assignments</a></li> -->
-                    <li><a href="music.html">Sheet Music</a></li>
-                    <li><a href="#">Practice</a></li>
-                    <li><a href="account.html">Account</a></li>
+                    <li><a href="music.html" class="pageLink">Sheet Music</a></li>
+                    <li><a href="#" class="pageLink">Practice</a></li>
+                    <li><a href="account.html" class="pageLink">Account</a></li>
                 </ul>
             </nav>
         </header>
@@ -50,6 +55,7 @@
             <ul id="calendar" class="hidden">
             </ul>
             <script type="module" src="./server.js"></script>
+            <script src="./scripts/nav.js"></script>
             <script src="./scripts/redirect.js"></script>
             <!-- <script type="module" src="scripts/accounts.js"></script> -->
             <script type="module" src="scripts/calendar.js"></script>

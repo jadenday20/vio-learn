@@ -106,6 +106,7 @@ a:hover {
 nav ul {
     display: flex;
     list-style: none;
+    flex-direction: column;
     padding-left: 0;
 }
 
@@ -113,9 +114,9 @@ nav li, button, .alert {
     background-color: var(--background1);
     border-radius: 5px;
     border: 1px solid var(--paragraph1);
-    margin: 0 1em;
+    margin: 1px 1em;
     max-width: 100%;
-    width: 7em;
+    width: 14em;
 }
 
 nav li:hover, button:hover {
@@ -197,4 +198,12 @@ input[type=checkbox] {
 
 .account button {
     margin-bottom: 5px;
+}
+
+.hamburger .bar {
+    background-color: var(--buttontext);
+    width: 25px;
+    height: 3px;
+    margin: 3.75px auto;
+    border-radius: 2px;
 }

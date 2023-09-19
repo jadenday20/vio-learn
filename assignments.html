@@ -24,7 +24,11 @@
             </div>
             <nav>
                 <ul class="flex-container">
-                    <li class="hamburger"></li>
+                    <li class="hamburger"><a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+                            <div class="bar bar1"></div>
+                            <div class="bar bar2"></div>
+                            <div class="bar bar3"></div>
+                        </a></li>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="#">Assignments</a></li>
                     <li><a href="music.html">Sheet Music</a></li>
@@ -82,6 +86,7 @@
             <button id="list_view" onclick="remove_checkboxes()">List View</button>
             <script src="scripts/checklist_view.js"></script>
             <script src="scripts/date.js"></script>
+            <script src="./scripts/nav.js"></script>
 
         </main>
         <footer>

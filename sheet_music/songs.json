@@ -3,7 +3,7 @@
         {
             "name": "Gavotte",
             "file": "Gavotte",
-            "audioFiles": ["Gavotte"]
+            "audioFiles": ["Gavotte_Violin_Only", "Gavotte_With_Harpsicord"]
         },
         {
             "name": "A Whole New World",

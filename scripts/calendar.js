@@ -117,6 +117,7 @@ function deleteArrow(arrowName) {
 
 function shiftMonth(evt) {
   deleteCalendar();
+  document.querySelector(".progressMessage").classList.toggle("hidden");
   if (evt.currentTarget.direction == "back") {
     if (month != 0) {
       month -= 1;
